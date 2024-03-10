@@ -1,6 +1,3 @@
-// let numb = "01"+5;
-// console.log(numb);
-
 const Lectures = {
     khwLectures : 
     {"조직행위론(다310)":"월10B목10B",
@@ -10,10 +7,16 @@ const Lectures = {
     "데이터 애널리틱스-머신러닝(다B108)":"월01B목01B",
     "서비스관리(다B106)":"화03A금03A", 
     "김혜원의 학원알바(영어학원)":"외부입력"}, 
+    daeLectures :
+    {"중앙도서관 근로(중도)" : "월10B금10B",
+    "경영대 근로(다312)": "화06B수05A"},
 
     assaLectures : 
     {"김밥먹기(화장실)":"월12A화12A",
-    "김밥먹기 심화(화장실)":"수06A목1B"},
+    "김밥먹기 심화(화장실)":"수06A목01B"},
+    inssaLectures:
+    {"크라임씬보기(집)":"목03A금01B",
+    "파묘(영화관)":"금06B"},
     htjLectures :
     {"재무관리(다B106)":"월09A수09A",
     "인공지능과 경영(다308)":"수10B금10B",
@@ -107,7 +110,6 @@ function addLectureTimes(param) {
 
 
                     classLocation.append(createdClass)
-                    console.log("A추가했다 ㅋ")
                 } else if(times[index+3] === "B"){
                     const createdClass = document.createElement('div')
                     createdClass.classList.add("time_30to45")
@@ -128,25 +130,10 @@ function addLectureTimes(param) {
 
 
                     classLocation.append(createdClass)
-                    console.log("B추가했다 ㅋ")
                 }
                 console.dir(classLocation)
 
                 console.log(classIndex);
-                
-                
-                
-
-            //     for (let a = 0; a<nameLectures[i].length; a++){
-            //         console.log(nameLectures[i][a]);
-    
-            //     }
-            // }
-            // for (let i in Lectures[name+"Lectures"]){
-            //     console.log(i);
-            // }
-            // console.log(khwButton.checked);
-            // console.log(param.target.value)
     
         }
 
@@ -157,5 +144,3 @@ function addLectureTimes(param) {
 allButton.forEach(function(button){
     button.addEventListener("change",addLectureTimes)
 })
-
-// console.log(khwButton.checked);
