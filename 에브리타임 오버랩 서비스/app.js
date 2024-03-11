@@ -35,9 +35,68 @@ const khwButton = document.querySelectorAll("input")[0]
 
 function addLectureTimes(param) {
     if (param.srcElement.checked == false){ // 체크 해제됐을 때
-        console.dir(param)
-        console.log("체크 해제")
-    }
+        const name = param.target.value //khw
+        const nameLectures = Lectures[name+"Lectures"]; // {회계학원론:월A~}
+        for (const i in nameLectures){
+            const times = nameLectures[i]; //월10B목10B
+            const info = i; //조직행위론(다310)
+            for (const index of [0,4]){ //월 , 목 두개 반복
+                let col = 0
+                let row = 0
+                let classType = "O"
+                if (times[index] === "월"){
+                    col = 1
+                }else if (times[index] === "화"){
+                    col = 2
+                }else if (times[index] === "수"){
+                    col = 3
+                }else if (times[index] === "목"){
+                    col = 4
+                }else if (times[index] === "금"){
+                    col = 5
+                }else{
+                    col = "외부입력"
+                    continue
+                }
+                let startTime =times.substring(index+1,index+3);
+                if (startTime >= 9 && startTime <= 12){
+                    row = parseInt(startTime) - 8
+                }
+                else if(startTime>=1 && startTime <= 7 ){
+                    row = parseInt(startTime) + 4  // Int로 변환시켜줘 오류 방지!
+                }
+                const classIndex = (row-1)*6 + col
+                const classLocation = document.querySelectorAll("tr td")[classIndex] //66번째 tr 등..
+                
+
+
+                // 정규 표현식을 사용하여 괄호 안의 내용을 추출
+                const classroomText = info.match(/\(([^)]+)\)/);
+                let lect_N = ""
+                let clas_N = ""
+                // 괄호 안의 내용이 있다면 추출하여 변수에 저장
+                if (classroomText) {
+                    const lect = info.substring(0, classroomText.index);
+                    const clas = classroomText[1];
+                    
+                    lect_N = lect
+                    clas_N = clas
+                } else {
+                    console.log("괄호가 없거나 형식이 맞지 않습니다.");
+                }
+                for (const child of classLocation.childNodes){
+                    if (child.innerText == lect_N+"\n"+clas_N){
+                        console.log("삭제~");
+                        child.remove()
+                        break
+                    } else{
+                        console.log("삭제안해 ㅋ");
+                    }
+                    }
+                    // console.log(child);
+                }
+            
+            }}
     else{ // 체크됐을 때
         const name = param.target.value //khw
         const nameLectures = Lectures[name+"Lectures"]; // {회계학원론:월A~}

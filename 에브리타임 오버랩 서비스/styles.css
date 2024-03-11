@@ -5,6 +5,7 @@
 
 body{
     margin-bottom: 60px;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 header p{
@@ -70,7 +71,7 @@ div.time_oto15 {
     width: 100%; /* 부모 요소의 너비를 100%로 설정 */
     position: absolute; /* 상대 위치 설정 */
     /* background-color: rgba(10, 90, 10, 0.84); */
-    background-color: rgba(50, 205, 50, 0.6);
+    background-color: rgba(50, 205, 50, 0.3);
     display: flex;
     flex-direction: column;
 }
@@ -82,7 +83,7 @@ div.time_oto15::after {
     bottom: -25.004%; /* 아래쪽으로 25%만큼 넘치도록 설정 */
     width: 100%;
     height: 25.004%;
-    background-color: rgba(50, 205, 50, 0.6);
+    background-color: rgba(50, 205, 50, 0.3);
 }
 
 
@@ -91,7 +92,7 @@ div.time_30to45 {
     height: 100%; /* 부모 요소의 높이를 100%로 설정 */
     width: 100%; /* 부모 요소의 너비를 100%로 설정 */
     position: absolute; /* 상대 위치 설정 */
-    background-color: rgba(34, 255, 0,0.5);
+    background-color: rgba(34, 255, 0,0.3);
     display: flex;
     flex-direction: column;
 }
@@ -103,7 +104,7 @@ div.time_30to45::after {
     bottom: -25.004%; /* 아래쪽으로 25%만큼 넘치도록 설정 */
     width: 100%;
     height: 25.004%;
-    background-color: rgba(34, 255, 0,0.5);
+    background-color: rgba(34, 255, 0,0.3);
 
 }
 
