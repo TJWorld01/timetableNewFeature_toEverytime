@@ -20,7 +20,8 @@
 <br>
 
 ### 1. 내 시간표 탭에 접속한다. 
-<img height="380" src="https://github.com/hye-long/Baekjoon/assets/159509656/19bee8ad-2da8-49d4-b866-9230d4c49401">
+
+<img height="380" src="https://github.com/TJWorld01/timetableNewFeature_toEverytime/assets/159509656/6932917c-67d5-448e-a598-a41d510689f7">
 
 ### 2. 합치고 싶은 친구를 친구 목록에서 클릭한다.
 <br>
