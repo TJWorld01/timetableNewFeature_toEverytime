@@ -3,7 +3,7 @@
 
 ## 문제인식
 
-<img width="565" alt="image" src="https://github.com/hye-long/Baekjoon/assets/159509656/20444654-c73f-4d3d-9ca4-618ffdda4730">
+<img width="530" height="380" alt="image" src="https://github.com/TJWorld01/timetableNewFeature_toEverytime/assets/159509656/528549e1-1d78-4df5-ba83-447f2c71747e">">
 
 <hr>
 조별과제를 하거나 밥 약속을 잡을 때 <br>
